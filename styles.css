@@ -1,0 +1,60 @@
+.fa-info-circle {
+  padding-left: 0.7em;
+}
+
+.bgcolored {
+  padding: 4px;
+  border-radius: 5px;
+}
+
+div.footable-row-detail-row .bgcolored {
+  padding: 1px;
+  border-radius: 3px;
+}
+
+.good {
+  background-color: #c7e9c0;
+}
+
+.moderate {
+  background-color: #fff7bc;
+}
+
+.poor {
+  background-color: #fcbba1;
+}
+
+.level9 {
+  background-color: #78c679;
+  color: white;
+}
+.level8 {
+  background-color: #91cf85;
+  color: white;
+}
+.level7 {
+  background-color: #aad892;
+  color: white;
+}
+.level6 {
+  background-color: #c3e19e;
+}
+.level5 {
+  background-color: #ddeaab;
+}
+.level4 {
+  background-color: #e2d499;
+}
+.level3 {
+  background-color: #e8bf88;
+}
+.level2 {
+  background-color: #eea976;
+}
+.level1 {
+  background-color: #f49465;
+}
+
+.grayed {
+  color: #d3d3d3;
+}

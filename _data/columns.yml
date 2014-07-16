@@ -1,0 +1,90 @@
+- name: Wallet
+  attributes:
+    data-sort-initial: true  # Initially sorted by this column
+
+- name: Backup Frequency
+  tooltip: |
+    How frequently you will need to back up your
+    wallet when creating new receiving addresses.
+  styles:
+    Once:       bgcolored good
+    Occational: bgcolored moderate
+    Often:      bgcolored poor
+
+- name: Password Recovery
+  tooltip: Does a password recovery mechanism exist?
+  styles:
+    "Yes": bgcolored good
+    "No":  bgcolored poor
+
+- name: Password Strength
+  tooltip: |
+    All wallets use strong encryption, but some
+    wallets provide better resistance to password
+    brute-force guessing attacks. Using a wallet
+    with less resistance means you will need to
+    use a longer password to keep your wallet safe.
+  styles:
+    High:     bgcolored level9
+    Moderate: bgcolored level7
+    Low:      bgcolored level5
+  attributes:
+    data-hide: phone
+
+- name: Trust Level
+  tooltip: |
+    If individuals or servers are compromised or hacked,
+    this indicates how difficult it would be for the
+    criminals to steal your BTC or otherwise manipulate
+    transactions. 9 means it would still be very difficult
+    or impossible, 1 means it would be relatively easy.
+  styles:
+    9: bgcolored level9
+    8: bgcolored level8
+    7: bgcolored level7
+    6: bgcolored level6
+    5: bgcolored level5
+    4: bgcolored level4
+    3: bgcolored level3
+    2: bgcolored level2
+    1: bgcolored level1
+
+- name: Disk Space
+  tooltip: The required disk space to use the wallet software.
+  styles:
+    None:   bgcolored good
+    10 MB:  bgcolored good
+    100 MB: bgcolored good
+    20+ GB: bgcolored moderate
+    40+ GB: bgcolored poor
+  attributes:
+    data-hide: phone
+
+- name: Initial Sync Time
+  tooltip: |
+    Approximately how long you'll need to wait after first
+    installing the wallet software before it's synchronized
+    with the network and you can begin using it.
+  styles:
+    None:    bgcolored good
+    Minutes: bgcolored good
+    Hours:   bgcolored moderate
+    Days:    bgcolored poor
+  attributes:
+    data-hide: phone,tablet
+
+- name: Online Access
+  tooltip: Is this an online/web-based wallet?
+  attributes:
+    data-hide: phone,tablet
+
+- name: Two-Factor
+  tooltip: |
+    For online wallets, does the website offer two-factor
+    authentication? (doesn't apply to offline-only wallets)
+  styles:
+    "Yes": bgcolored good
+    "No":  bgcolored poor
+    n/a:   grayed
+  attributes:
+    data-hide: phone

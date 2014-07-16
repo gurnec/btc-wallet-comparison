@@ -1,0 +1,142 @@
+- Wallet:
+    value:      Armory
+  Backup Frequency:
+    value:      Once
+    sort_value: 1
+  Password Recovery:
+    value:      "Yes"
+    sort_value: 1
+  Password Strength:
+    value:      High
+    sort_value: 1
+  Trust Level:
+    value:      9
+    sort_value: 1
+  Disk Space:
+    value:      40+ GB
+    sort_value: 40000
+  Initial Sync Time:
+    value:      Hours
+    sort_value: 240
+  Online Access:
+    value:      "No"
+  Two-Factor:
+    value:      n/a
+    sort_value: 9
+
+- Wallet:
+    value:      Bitcoin Core
+    tooltip:    Previously known as Bitcoin-Qt.
+  Backup Frequency:
+    value:      Occational
+    sort_value: 5
+    tooltip:    Backups must be made after every 100 new receiving addresses.
+  Password Recovery:
+    value:      "No"
+    sort_value: 2
+  Password Strength:
+    value:      Moderate
+    sort_value: 2
+  Trust Level:
+    value:      9
+    sort_value: 1
+  Disk Space:
+    value:      20+ GB
+    sort_value: 20000
+  Initial Sync Time:
+    value:      Days
+    sort_value: 1440
+    tooltip: |
+      The initial sync time can be reduced to hours by manually
+      downloading a special "bootstrap" file via BitTorrent.
+  Online Access:
+    value:      "No"
+  Two-Factor:
+    value:      n/a
+    sort_value: 9
+
+- Wallet:
+    value:      Blockchain.info
+  Backup Frequency:
+    value:      Often
+    sort_value: 8
+    tooltip: |
+      Backups must be made for each new receiving address,
+      however easy automated backup options are available.
+  Password Recovery:
+    value:      "Yes"
+    sort_value: 1
+  Password Strength:
+    value:      Low
+    sort_value: 3
+    tooltip: |
+      Although the default options result in a password with a
+      relatively Low level of brute-force resistance, options
+      exist to increase this resistance to a Moderate level.
+  Trust Level:
+    value:      5
+    sort_value: 5
+  Disk Space:
+    value:      None
+    sort_value: 0
+  Initial Sync Time:
+    value:      None
+    sort_value: 0
+  Online Access:
+    value:      "Yes"
+  Two-Factor:
+    value:      "Yes"
+    sort_value: 1
+
+- Wallet:
+    value:      Electrum
+  Backup Frequency:
+    value:      Once
+    sort_value: 1
+  Password Recovery:
+    value:      "Yes"
+    sort_value: 1
+  Password Strength:
+    value:      Low
+    sort_value: 4
+  Trust Level:
+    value:      7
+    sort_value: 3
+  Disk Space:
+    value:      100 MB
+    sort_value: 100
+  Initial Sync Time:
+    value:      Minutes
+    sort_value: 1
+  Online Access:
+    value: "No"
+  Two-Factor:
+    value:      n/a
+    sort_value: 9
+
+- Wallet:
+    value:      MultiBit Classic
+  Backup Frequency:
+    value:      Often
+    sort_value: 9
+    tooltip:    Backups must be made for each new receiving address.
+  Password Recovery:
+    value:      "No"
+    sort_value: 2
+  Password Strength:
+    value:      Low
+    sort_value: 4
+  Trust Level:
+    value:      8
+    sort_value: 2
+  Disk Space:
+    value:      10 MB
+    sort_value: 10
+  Initial Sync Time:
+    value:      Minutes
+    sort_value: 1
+  Online Access:
+    value:      "No"
+  Two-Factor:
+    value:      n/a
+    sort_value: 9

@@ -1,0 +1,127 @@
+---
+title: Bitcoin Wallet Software Comparison
+---
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1">
+<title>{{ page.title }}</title>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" />
+<link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.footable/2.0.1/css/footable.core.min.css" />
+<link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.footable/2.0.1/css/footable.standalone.css" />
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/css/tooltipster.min.css" />
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/css/themes/tooltipster-shadow.min.css" />
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="gh-fork-ribbon.css">
+<!--[if lt IE 9]>
+  <link rel="stylesheet" href="gh-fork-ribbon.ie.css">
+<![endif]-->
+<link rel="stylesheet" href="styles.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/jquery.footable/2.0.1/footable.min.js"></script>
+<script src="//cdn.jsdelivr.net/jquery.footable/2.0.1/footable.sort.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/js/jquery.tooltipster.min.js"></script>
+<script>
+$(document).ready(function() {
+
+  // Initialize FooTable
+  $('.footable').footable();
+
+  // Save the tooltips before they are removed by the Tooltipster initialization below
+  $('.tooltip').each(function() {
+    cur = $(this);
+    cur.attr('savedtitle', cur.attr('title'));
+    cur.parent().addClass("fully-initialized-tooltips");  // mark it as fully initialized
+  });
+
+  // Initialize Tooltipster
+  var tooltipster_options = {
+    theme: 'tooltipster-shadow',
+    contentAsHTML: true
+  };
+  $('.tooltip').tooltipster(tooltipster_options);
+
+  // Workaround for FooTable + Tooltipster: whenever FooTable creates new rows,
+  // reinitialize their Tooltipsters using the original tooltips we saved above
+  $('.footable').on('footable_row_detail_updated', function(ev) {
+    // For each tooltip in a newly-created row in the updated table
+    $(ev.currentTarget).find(':not(.fully-initialized-tooltips) > .tooltip').each(function() {
+      cur = $(this)
+      cur.attr('title', cur.attr('savedtitle'));  // restore the tooltip removed by Tooltipster
+      cur.tooltipster(tooltipster_options);
+      cur.parent().addClass("fully-initialized-tooltips");  // mark it as fully initialized
+    });
+  });
+
+  // If the info symbol is clicked, prevent the click from propagating up to
+  // the th element which would change the sort order (for touchscreen users).
+  $('th > span.tooltip').on('click', '.fa-info-circle', function(ev) {
+    ev.stopPropagation();
+  });
+});
+</script>
+</head>
+<body>
+
+<div class="github-fork-ribbon-wrapper right">
+  <div class="github-fork-ribbon">
+    <a href="https://github.com/gurnec/btc-wallet-comparison">Fork me on GitHub</a>
+  </div>
+</div>
+
+<div style="margin: 1em">
+
+<h1>{{ page.title }}</h1>
+
+<p>A simple comparison table made especially for Bitcoin beginners.</p>
+
+<table class="footable toggle-square toggle-medium">
+  <thead>
+    <tr>
+{% for col in site.data.columns %}
+      <th{% for a in col.attributes %} {{a[0]}}="{{a[1]}}"{% endfor %}>
+{%   if col.tooltip %}
+      <span class="tooltip" title="{{ col.tooltip | newline_to_br | strip_newlines | escape }}">
+        {{ col.name }} <i class="fa fa-info-circle"></i>
+      </span>
+{%   else %}
+        {{ col.name }}
+{%   endif %}
+      </th>
+{% endfor %}
+    </tr>
+  </thead>
+
+  <tbody>
+{% for wallet in site.data.wallets %}
+    <tr>
+{%   for col in site.data.columns %}
+{%     assign td = wallet[col.name] %}
+      <td{% if td.sort_value %} data-value="{{td.sort_value}}" data-type="numeric"{% endif %}>
+{%     capture td_styled %}
+{%       if col.styles %}
+      <span class="{{ col.styles[td.value] }}">
+        {{ td.value }}
+      </span>
+{%       else %}
+        {{ td.value }}
+{%       endif %}
+{%     endcapture %}
+{%     if td.tooltip %}
+      <span class="tooltip" title="{{ td.tooltip | newline_to_br | strip_newlines | escape }}">
+{{ td_styled }} <i class="fa fa-info-circle"></i>
+      </span>
+{%     else %}
+{{ td_styled }}
+{%     endif %}
+      </td>
+{%   endfor %}
+    </tr>
+{% endfor %}
+  </tbody>
+</table>
+
+</div>
+</body>
+</html>
