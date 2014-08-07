@@ -146,7 +146,7 @@
     sort_value: 9
 
 - Wallet:
-    value:      BitGo.com
+    value:      GreenAddress.it
   Backup Frequency:
     value:      Once
     sort_value: 1
