@@ -6,6 +6,9 @@
   tooltip: |
     How frequently you will need to back up your wallet
     as a result of creating new receiving addresses.
+    (Receiving a Bitcoin payment doesn't require a new
+    backup, only the creation of new Bitcoin addresses
+    might require a backup, depending on your wallet.)
   styles:
     Once:       bgcolored good
     Occational: bgcolored moderate
