@@ -160,6 +160,12 @@
   Password Strength:
     value:      Low
     sort_value: 3
+    tooltip: |
+      If you save your wallet/key to your hard drive using the provided
+      encryption feature, the password strength is Low. Counterintuitively,
+      if you enable the PIN option <i>and</i> if you don't save the wallet/key
+      to your hard drive manually (and only back it up to paper), the
+      password strength is Moderate or better.
   Trust Level:
     value:      5
     sort_value: 5
@@ -171,6 +177,10 @@
     sort_value: 0
   Online Access:
     value:      "Yes"
+    tooltip: |
+      Because a typical username/password login method is not used, logging
+      in with a new device for the first time is inconvenient as you must
+      instead log in with your full key (however this might be more secure).
   Two-Factor:
     value:      "Yes"
     sort_value: 1
