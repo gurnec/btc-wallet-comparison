@@ -4,8 +4,8 @@
 
 - name: Backup Frequency
   tooltip: |
-    How frequently you will need to back up your
-    wallet when creating new receiving addresses.
+    How frequently you will need to back up your wallet
+    as a result of creating new receiving addresses.
   styles:
     Once:       bgcolored good
     Occational: bgcolored moderate
@@ -80,8 +80,9 @@
 
 - name: Two-Factor
   tooltip: |
-    For online wallets, does the website offer two-factor
-    authentication? (doesn't apply to offline-only wallets)
+    Some wallets offer two-factor authentication on a per-
+    transaction basis. When enabled, this feature offers
+    very good protection against viruses and other malware.
   styles:
     "Yes": bgcolored good
     "No":  bgcolored poor

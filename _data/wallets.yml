@@ -62,7 +62,7 @@
     sort_value: 8
     tooltip: |
       Backups must be made for each new receiving address,
-      however easy automated backup options are available.
+      however easy-to-use backup options are available.
   Password Recovery:
     value:      "Yes"
     sort_value: 1
@@ -74,8 +74,8 @@
       relatively Low level of brute-force resistance, options
       exist to increase this resistance to a Moderate level.
   Trust Level:
-    value:      5
-    sort_value: 5
+    value:      4
+    sort_value: 6
   Disk Space:
     value:      None
     sort_value: 0
@@ -85,8 +85,12 @@
   Online Access:
     value:      "Yes"
   Two-Factor:
-    value:      "Yes"
-    sort_value: 1
+    value:      "No"
+    sort_value: 2
+    tooltip: |
+      Although two-factor authorization is supported for logins,
+      it is not supported on a per-transaction basis and does not
+      protect you against malware that might be on your system.
 
 - Wallet:
     value:      Electrum
@@ -140,3 +144,60 @@
   Two-Factor:
     value:      n/a
     sort_value: 9
+
+- Wallet:
+    value:      BitGo.com
+  Backup Frequency:
+    value:      Once
+    sort_value: 1
+  Password Recovery:
+    value:      "Yes"
+    sort_value: 1
+    tooltip: |
+      Because your wallet/key <i>is</i> your password, as long as
+      you still have your backup, you can log into your account
+      (unless you've encrypted the backup and have lost <i>its</i> password).
+  Password Strength:
+    value:      Low
+    sort_value: 3
+  Trust Level:
+    value:      5
+    sort_value: 5
+  Disk Space:
+    value:      None
+    sort_value: 0
+  Initial Sync Time:
+    value:      None
+    sort_value: 0
+  Online Access:
+    value:      "Yes"
+  Two-Factor:
+    value:      "Yes"
+    sort_value: 1
+
+- Wallet:
+    value:      BitGo.com
+  Backup Frequency:
+    value:      Once
+    sort_value: 1
+  Password Recovery:
+    value:      "Yes"
+    sort_value: 1
+    tooltip:    Assumes that you haven't lost your initial key backups.
+  Password Strength:
+    value:      Moderate
+    sort_value: 2
+  Trust Level:
+    value:      5
+    sort_value: 5
+  Disk Space:
+    value:      None
+    sort_value: 0
+  Initial Sync Time:
+    value:      None
+    sort_value: 0
+  Online Access:
+    value:      "Yes"
+  Two-Factor:
+    value:      "Yes"
+    sort_value: 1
