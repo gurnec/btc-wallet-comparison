@@ -78,10 +78,10 @@
     sort_value: 6
   Disk Space:
     value:      None
-    sort_value: 0
+    sort_value: 1
   Initial Sync Time:
     value:      None
-    sort_value: 0
+    sort_value: 1
   Online Access:
     value:      "Yes"
   Two-Factor:
@@ -111,7 +111,7 @@
     sort_value: 100
   Initial Sync Time:
     value:      Minutes
-    sort_value: 1
+    sort_value: 5
   Online Access:
     value: "No"
   Two-Factor:
@@ -138,7 +138,7 @@
     sort_value: 10
   Initial Sync Time:
     value:      Minutes
-    sort_value: 1
+    sort_value: 5
   Online Access:
     value:      "No"
   Two-Factor:
@@ -171,10 +171,10 @@
     sort_value: 5
   Disk Space:
     value:      None
-    sort_value: 0
+    sort_value: 1
   Initial Sync Time:
     value:      None
-    sort_value: 0
+    sort_value: 1
   Online Access:
     value:      "Yes"
     tooltip: |
@@ -202,10 +202,10 @@
     sort_value: 5
   Disk Space:
     value:      None
-    sort_value: 0
+    sort_value: 1
   Initial Sync Time:
     value:      None
-    sort_value: 0
+    sort_value: 1
   Online Access:
     value:      "Yes"
   Two-Factor:
