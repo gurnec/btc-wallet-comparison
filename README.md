@@ -1,6 +1,8 @@
 # Bitcoin Wallet Software Comparison #
 
-A simple comparison table made especially for Bitcoin beginners, available for your viewing pleasure here: <http://gurnec.github.io/btc-wallet-comparison>.
+An outdated Bitcoin wallet comparison table. Please visit <https://bitcoin.org/en/choose-your-wallet> instead.
+
+For historical purposes, the outdated comparison is available here: <http://gurnec.github.io/btc-wallet-comparison>.
 
 ## Data Files ##
 
