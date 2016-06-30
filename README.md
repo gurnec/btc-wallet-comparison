@@ -1,6 +1,6 @@
 # Bitcoin Wallet Software Comparison #
 
-An outdated Bitcoin wallet comparison table. Please visit <https://bitcoin.org/en/choose-your-wallet> instead.
+An outdated Bitcoin wallet comparison table. Please visit <https://www.bitcoin.com/choose-your-wallet> instead.
 
 For historical purposes, the outdated comparison is available here: <http://gurnec.github.io/btc-wallet-comparison>.
 
